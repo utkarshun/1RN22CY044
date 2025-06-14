@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+nav {
+  margin: 20px 0;
+}
+nav a {
+  color: #4a90e2;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.stock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.stock-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1 1 calc(33.333% - 40px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.stock-item h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+}
+.stock-item p {
+  margin: 5px 0;
+}
+.stock-item .price {
+  font-size: 1.2em;
+  color: #4a90e2;
+}
+.stock-item .change {
+  font-size: 1em;
+  color: #e94e77;
+}
+.stock-item .change.positive {
+  color: #4caf50;
+}
+.stock-item .change.negative {
+  color: #e94e77;
+}
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+@media (max-width: 768px) {
+  .stock-item {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+@media (max-width: 480px) {
+  .stock-item {
+    flex: 1 1 100%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  header,
+  footer {
+    background-color: #1f1f1f;
+  }
+  nav a {
+    color: #bb86fc;
+  }
+  .stock-item {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  .stock-item .price,
+  .stock-item .change {
+    color: #bb86fc;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .stock-item .change.positive {
+    color: #03dac6;
+  }
+  .stock-item .change.negative {
+    color: #cf6679;
+  }
+}
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  header,
+  footer {
+    display: none;
+  }
+  .stock-list {
+    display: block;
+  }
+  .stock-item {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 400px) {
+  .stock-item {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  .stock-item h2 {
+    font-size: 1.2em;
+  }
+  .stock-item p {
+    font-size: 0.9em;
+  }
+}
